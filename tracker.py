@@ -2,14 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-scrap_data = [{'store': 'dia', 
+scrap_params = [
+        {'store': 'dia', 
          'url': 'https://diaonline.supermercadosdia.com.ar/bebida-energizante-monster-energy-mango-loco-473-ml-282433/p',
          'parent': 'span.vtex-product-price-1-x-currencyContainer',
          'child': 'span.vtex-product-price-1-x-currencyInteger'},
 
         {'store': 'disco', 
-         'url':  'https://www.disco.com.ar/bebida-energizante-monster-mango-loco-473-ml/p',
-         },
+         'url':  'https://www.disco.com.ar/bebida-energizante-monster-mango-loco-473-ml/p'},
 
         {'store': 'carrefour', 
          'url':  'https://www.carrefour.com.ar/bebida-energizante-monster-mango-loco-473-ml-655265/p',
@@ -19,7 +19,7 @@ scrap_data = [{'store': 'dia',
 
 
 def scraper():
-    for n in scrap_data:
+    for n in scrap_params:
         store = n['store']
         url = n['url']
         response = requests.get(url)
