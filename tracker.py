@@ -35,4 +35,4 @@ def scraper():
         print(f'Monster Mango en {store} cuesta {price_text}.')
 
 if __name__ == '__main__':
-    scraper()
+    scraper() 
