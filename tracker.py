@@ -32,7 +32,7 @@ def scraper():
         else:
             price_int = soup.select_one(f"{n['parent']} > {n['child']}")
             price_text = price_int.text
-        print(f'Monster Mango en {store} cuesta {price_text}.')
+        print(f'Monster Mango in {store} is $ {price_text}.')
 
 if __name__ == '__main__':
     scraper()
